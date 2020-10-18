@@ -1,0 +1,11 @@
+<div class="course-card">
+  <img class="course-card-image" [src]="course.cover" alt="">
+  <div class="course-card-main">
+    <div class="course-card-title">{{ course.title }}</div>
+    <div class="course-card-instructor">{{ course.author }}</div>
+    <div class="course-card-footer">
+      <div class="course-card-rating">{{ course.stars }} <span class="star">★</span></div>
+      <div class="course-card-price">€{{ course.price }}</div>
+    </div>
+  </div>
+</div>

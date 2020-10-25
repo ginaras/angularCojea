@@ -1,0 +1,15 @@
+<h1>SDA for Business</h1>
+<p>We offer special subscription rates for people in your company.</p>
+<p>Price per month per individual is {{ pricePerMonth }} euro.</p>
+
+<h3>How many employees?</h3>
+<p>
+  <app-plus-minus [value]="individuals" [min]="-10" (valueChanged)="individuals = $event"></app-plus-minus> employees
+</p>
+
+<h3>How many months?</h3>
+<p>
+  <app-plus-minus [value]="months" (valueChanged)="months = $event"></app-plus-minus> months
+</p>
+
+<h3>Total: {{ getTotal() }} euro</h3>

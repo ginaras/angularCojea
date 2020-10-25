@@ -1,0 +1,35 @@
+<div [formGroup]="form">
+  <h1>Edit instructor</h1>
+  <div>
+    <label for="instructor-name">Instructor name</label>
+    <input id="instructor-name" type="text" placeholder="Name" formControlName="name">
+  </div>
+  <div>
+    <label for="instructor-picture">Picture</label>
+    <input id="instructor-picture" type="text" placeholder="Picture" formControlName="picture">
+  </div>
+  <div>
+    <label for="instructor-topics">Topics</label>
+    <input id="instructor-topics" type="text" placeholder="Topics" formControlName="topics">
+  </div>
+  <div>
+    <label for="instructor-rating">Rating</label>
+    <input id="instructor-rating" type="number" placeholder="Rating" formControlName="rating">
+  </div>
+  <div>
+    <label for="instructor-students">Students</label>
+    <input id="instructor-students" type="number" placeholder="Students" formControlName="students">
+  </div>
+  <div>
+    <label for="instructor-courses">Courses</label>
+    <input id="instructor-courses" type="number" placeholder="Courses" formControlName="courses">
+  </div>
+  <button type="submit" (click)="update()" [disabled]="form.invalid">Update</button>
+</div>
+
+<div>
+  form value: {{form.value | json}}
+</div>
+<div>
+  invalid: {{form.invalid | json}}
+</div>

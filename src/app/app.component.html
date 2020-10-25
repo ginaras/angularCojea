@@ -1,6 +1,5 @@
-<app-course-card *ngFor="let c of courses" [course]="c"></app-course-card>
+<app-navbar></app-navbar>
 
-<div *ngFor="let ins of instructors">
-  <img [src]="ins.picture" alt="">
-  {{ins.name}}
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

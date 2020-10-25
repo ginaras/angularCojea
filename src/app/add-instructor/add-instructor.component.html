@@ -1,0 +1,23 @@
+<div [formGroup]="form">
+  <h1>Add instructor</h1>
+  <div>
+    <label for="instructor-name">Instructor name</label>
+    <input id="instructor-name" type="text" placeholder="Name" formControlName="name">
+  </div>
+  <div>
+    <label for="instructor-picture">Picture</label>
+    <input id="instructor-picture" type="text" placeholder="Picture" formControlName="picture">
+  </div>
+  <div>
+    <label for="instructor-topics">Topics</label>
+    <input id="instructor-topics" type="text" placeholder="Topics" formControlName="topics">
+  </div>
+  <button type="submit" (click)="save()" [disabled]="form.invalid">Save</button>
+</div>
+
+<div>
+  form value: {{form.value | json}}
+</div>
+<div>
+  invalid: {{form.invalid | json}}
+</div>

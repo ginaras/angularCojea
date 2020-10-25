@@ -1,0 +1,11 @@
+<h1>
+  Instructors
+  <button routerLink="/instructors/add">Add new instructor</button>
+</h1>
+
+<div *ngFor="let ins of instructors">
+  <img [src]="ins.picture" alt="">
+  {{ins.name}}
+  <button [routerLink]="ins.id">Edit</button>
+  <button (click)="deleteInstructor(ins)">Delete</button>
+</div>

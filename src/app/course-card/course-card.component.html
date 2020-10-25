@@ -7,5 +7,9 @@
       <div class="course-card-rating">{{ course.stars }} <span class="star">★</span></div>
       <div class="course-card-price">€{{ course.price }}</div>
     </div>
+    <div>
+      <button (click)="buyCourse()">Buy course</button>
+      <button (click)="deleteCourse()">Delete</button>
+    </div>
   </div>
 </div>

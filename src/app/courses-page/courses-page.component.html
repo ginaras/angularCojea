@@ -1,0 +1,8 @@
+<h1>Courses</h1>
+
+<p *ngIf="!selectedCourse">No course is selected.</p>
+<p *ngIf="selectedCourse">
+  You selected <strong>{{ selectedCourse.title }}</strong>.
+  <button (click)="clearSelected()">Clear</button>
+</p>
+<app-course-card *ngFor="let c of courses" [course]="c" (courseSelected)="onCouseSelected($event)" (courseDeleted)="onCouseDeleted($event)"></app-course-card>

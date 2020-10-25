@@ -1,4 +1,4 @@
-# courses-angular
+# courses-angular-day3
 
 ## Aplicatia de Angular
 

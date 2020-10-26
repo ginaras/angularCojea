@@ -4,12 +4,12 @@
 
 <h3>How many employees?</h3>
 <p>
-  <app-plus-minus [value]="individuals" [min]="1" [max]="20" (valueChanged)="individuals = $event"></app-plus-minus> employees
+  <app-plus-minus [value]="individuals" [min]="3" [max]="20" (valueChanged)="individuals = $event"></app-plus-minus> employees
 </p>
 
 <h3>How many months?</h3>
 <p>
-  <app-plus-minus [value]="months" [min]="3" [max]="12" (valueChanged)="months = $event"></app-plus-minus> months
+  <app-plus-minus [value]="months" [min]="1" [max]="12" (valueChanged)="months = $event"></app-plus-minus> months
 </p>
 
 <h3>Total: {{ getTotal() }} euro</h3>

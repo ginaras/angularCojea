@@ -1,4 +1,4 @@
-# courses-angular-day3
+# courses-angular-finished
 
 ## Aplicatia de Angular
 

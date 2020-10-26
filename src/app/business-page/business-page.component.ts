@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BusinessPageComponent implements OnInit {
 
   pricePerMonth = 20;
-  individuals = 1;
+  individuals = 3;
   months = 1;
 
   constructor() { }
@@ -19,7 +19,5 @@ export class BusinessPageComponent implements OnInit {
   getTotal() {
     return this.individuals * this.months * this.pricePerMonth;
   }
-
-
 
 }

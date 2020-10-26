@@ -8,7 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class PlusMinusComponent implements OnInit {
 
   @Input() value: number;
-  @Input() min: number = 0;
+  @Input() min: number;
+  @Input() max: number;
+  
   @Output() valueChanged = new EventEmitter();
 
   constructor() { }
@@ -18,15 +20,15 @@ export class PlusMinusComponent implements OnInit {
 
   increment() {
     this.value += 1;
+    if (this.max !== undefined && this.value > this.max) {
+      this.value = this.max;
+    }
     this.valueChanged.emit(this.value);
   }
 
   decrement() {
-    // if (this.value == 0) {
-    //   return;
-    // }
     this.value -= 1;
-    if (this.value < this.min) {
+    if (this.min !== undefined && this.value < this.min) {
       this.value = this.min;
     }
     this.valueChanged.emit(this.value);
